@@ -1,0 +1,40 @@
+body {
+    background-color: cadetblue;
+    text-align: center;
+    color:midnightblue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* #form {
+    background-color: darksalmon;
+} */
+
+form > input {
+    background-color: darksalmon;
+}
+
+#navbar {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: x-large;
+    text-decoration: none;
+    background-color:midnightblue;
+    margin: 20px;
+    padding:20px;
+}
+
+#link {
+    color:white;
+    text-transform: capitalize;
+}
+
+#navbar li {
+    list-style-type: none;
+    color: white;
+}
+
+img {
+    height: 500px;
+    margin-right: 20px;
+}
+
+

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>My Event List Next year</h1>
+<nav id="form">
+<form action="/events" method="post">
+    <label for="name">Event Name</label>
+    <input type="text" name="name"><br>
+    <label for="date">Event Date</label>
+    <input type="date" id="date" name="event-date"
+        value="2021-09-16"
+        min="2021-01-01" max="2021-12-31"><br>
+    <!-- <input type="text" name="date"><br> -->
+    <label for="number_guests">Event Guests</label>
+    <input type="number" name="number_guests"><br>
+    <label for="location">Event Location</label>
+    <input type="text" name="location"><br>
+    <label for="description">Event Description</label>
+    <input type="text" name="description"><br>
+    <label for="recurring">Recurring</label>
+    <input type="checkbox" checked ="checked" name="recurring" id="recurring"><br>
+    <input type="submit" value="Add Event">
+</form>
+</nav>
+
+<div id="buckie">
+    <img src="/static/buckie.jpeg">
+</div>
+{% for event in events %} 
+<div>
+    <p>
+        <h2>{{ event.name }}:</h2>
+        <h4> {{ event.date }} 
+            {% if event.recurring == "on" %}
+            <span>&#9989;</span>
+            {% endif %}
+        </h4>
+        
+        <h5> {{ event.number_guests }}</h5>
+        <h4> {{ event.location }}</h4>
+        <h4> {{ event.description }}</h4>
+        
+    </p>
+</div>
+{% endfor %} 
+
+{% endblock %} 
